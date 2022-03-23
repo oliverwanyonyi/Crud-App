@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: montserat;
+}
+:root {
+  --main: #ffffff;
+  --dark: #000011;
+}
+.dark {
+  --main: #000011;
+  --dark: #ffffff;
+}
+body {
+  background: var(--main);
+  color: var(--dark);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-btn {
+  position: fixed;
+  right: 3rem;
+  top: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid var(--main);
+  box-shadow: 4px 4px 8px #ffffff inset -4px -4px 8px #ffffff;
+  background-color: var(--dark);
+  color: var(--main);
+  font-size: 1rem;
+}

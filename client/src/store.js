@@ -1,0 +1,35 @@
+import { combineReducers, createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+import { loginReducer, registerReducer } from "./reducers/userReducers";
+import {
+  addTaskReducer,
+  deleteTaskReducer,
+  fetchTasksReducer,
+  updateTaskReducer,
+} from "./reducers/taskReducers";
+const reducer = combineReducers({
+  userRegister: registerReducer,
+  userLogin: loginReducer,
+  createTask: addTaskReducer,
+  taskList: fetchTasksReducer,
+  deleteTask: deleteTaskReducer,
+  updateTask: updateTaskReducer,
+});
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
+const initialState = {
+  userRegister: { user: userInfoFromStorage },
+  userLogin: { user: userInfoFromStorage },
+  taskList: { tasks: [] },
+};
+const middleware = [thunk];
+
+const store = createStore(
+  reducer,
+  initialState,
+  composeWithDevTools(applyMiddleware(...middleware))
+);
+
+export default store;

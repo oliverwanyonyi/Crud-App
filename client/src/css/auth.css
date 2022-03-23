@@ -1,0 +1,138 @@
+.signup__section {
+  padding: 40px 0;
+}
+
+.signup__section .signup-container {
+  background: var(--color-bg-variant1);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 13px;
+  padding: 20px 15px;
+}
+
+.signup__section .signup-container p {
+  color: var(--color-dark-variant2);
+  padding: 15px 0;
+  text-align: center;
+}
+
+.signup__section .signup-container p a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.signup__section .signup-container .welcome-text {
+  color: var(--color-success);
+  text-align: center;
+  font-size: 15px;
+  text-transform: capitalize;
+  padding: 10px 0;
+}
+
+.signup__section .signup-container .form .form-group {
+  margin-bottom: 20px;
+}
+
+.signup__section .signup-container .form .form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--color-white-variant1);
+  text-transform: capitalize;
+}
+
+.signup__section .signup-container .form .form-group .form-control {
+  background: var(--color-white);
+  width: 100%;
+  padding: 0 20px;
+  height: 40px;
+  font-size: 14px;
+  color: var(--color-dark-variant2);
+  border-radius: 10px;
+}
+
+.signup__section .signup-container .form .form-group textarea {
+  min-height: 120px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+  resize: vertical;
+}
+
+.signup__section .signup-container .form .auth-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.signup__section .signup-container .form .submit-btn {
+  color: var(--color-white);
+  cursor: pointer;
+  background-color: var(--color-success);
+  padding: 0 20px;
+  height: 40px;
+  width: 50%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.5rem;
+}
+
+.signup__section .signup-container .form .submit-btn .submit-loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  border-top-color: var(--color-bg-variant1);
+  -webkit-animation: spinner 1s linear infinite;
+          animation: spinner 1s linear infinite;
+}
+
+.signup__section .signup-container .form .submit-btn.get-credentials {
+  background: var(--color-warning);
+}
+
+.signup__section .signup-container .form .submit-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .signup__section .signup-container .form .auth-btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .signup__section .signup-container .form .submit-btn {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=auth.css.map */
