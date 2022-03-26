@@ -1,7 +1,12 @@
 import { combineReducers, createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { loginReducer, registerReducer } from "./reducers/userReducers";
+import {
+  getProfileReducer,
+  loginReducer,
+  registerReducer,
+  updateProfileReducer,
+} from "./reducers/userReducers";
 import {
   addTaskReducer,
   deleteTaskReducer,
@@ -15,6 +20,8 @@ const reducer = combineReducers({
   taskList: fetchTasksReducer,
   deleteTask: deleteTaskReducer,
   updateTask: updateTaskReducer,
+  userProfile: getProfileReducer,
+  updateProfile: updateProfileReducer,
 });
 const userInfoFromStorage = localStorage.getItem("userInfo")
   ? JSON.parse(localStorage.getItem("userInfo"))
