@@ -28,4 +28,4 @@
 - navigate back to client folder change api url in api.js inside api folder to ` http://localhost:5000` run npm start to start client server
 - head on to localhost:3000 on your browser enjoy 🎉
 
-- [Taskiit](https://taskiit.netlify.app)
+- [Taskiit](https://taskiit.netlify.app/)

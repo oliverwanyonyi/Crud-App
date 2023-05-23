@@ -7,7 +7,7 @@ const connectDb = async () => {
     });
     console.log(`db connected on : ${conn.connection.host}`);
   } catch (error) {
-    res.status(500);
+   
     throw new Error(error.message);
   }
 };
